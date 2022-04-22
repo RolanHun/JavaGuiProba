@@ -1,5 +1,9 @@
 package view;
 
+import java.io.File;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
+
 public class MainForm extends javax.swing.JFrame {
 
     public MainForm() {
@@ -121,6 +125,7 @@ public class MainForm extends javax.swing.JFrame {
 
         jRadioButton1.setText("lapokat felsorol");
 
+        jRadioButton2.setSelected(true);
         jRadioButton2.setText("lapok összértéke");
 
         jButton3.setText("Mentés");
@@ -224,7 +229,15 @@ public class MainForm extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void mnuFileMentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuFileMentActionPerformed
-        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setDialogTitle("Megnyitás");
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("*.jpg, *.gif", "*.txt");
+        fileChooser.setFileFilter(filter);
+        
+            int returnVal = fileChooser.showOpenDialog(fileChooser);
+            if (returnVal == JFileChooser.APPROVE_OPTION) {
+                 File file = fileChooser.getSelectedFile();
+            }
     }//GEN-LAST:event_mnuFileMentActionPerformed
 
     public static void main(String args[]) {
