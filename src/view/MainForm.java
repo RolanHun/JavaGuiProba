@@ -15,6 +15,7 @@ public class MainForm extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        buttonGroup1 = new javax.swing.ButtonGroup();
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -29,6 +30,13 @@ public class MainForm extends javax.swing.JFrame {
         jRadioButton2 = new javax.swing.JRadioButton();
         jButton3 = new javax.swing.JButton();
         jButton4 = new javax.swing.JButton();
+        jMenuBar1 = new javax.swing.JMenuBar();
+        mnuFile = new javax.swing.JMenu();
+        mnuFileMent = new javax.swing.JCheckBoxMenuItem();
+        mnuFileKilep = new javax.swing.JCheckBoxMenuItem();
+        mnuStr = new javax.swing.JMenu();
+        mnuStrKock = new javax.swing.JRadioButtonMenuItem();
+        mnuStrNemKock = new javax.swing.JRadioButtonMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("BlackJack");
@@ -145,6 +153,38 @@ public class MainForm extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
+        mnuFile.setText("File");
+
+        mnuFileMent.setSelected(true);
+        mnuFileMent.setText("Mentés");
+        mnuFileMent.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mnuFileMentActionPerformed(evt);
+            }
+        });
+        mnuFile.add(mnuFileMent);
+
+        mnuFileKilep.setSelected(true);
+        mnuFileKilep.setText("Kilépés");
+        mnuFile.add(mnuFileKilep);
+
+        jMenuBar1.add(mnuFile);
+
+        mnuStr.setText("Stratégia");
+
+        buttonGroup1.add(mnuStrKock);
+        mnuStrKock.setSelected(true);
+        mnuStrKock.setText("Kockáztat");
+        mnuStr.add(mnuStrKock);
+
+        buttonGroup1.add(mnuStrNemKock);
+        mnuStrNemKock.setText("Nem kockáztat");
+        mnuStr.add(mnuStrNemKock);
+
+        jMenuBar1.add(mnuStr);
+
+        setJMenuBar(jMenuBar1);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -174,6 +214,10 @@ public class MainForm extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void mnuFileMentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_mnuFileMentActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_mnuFileMentActionPerformed
 
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -207,6 +251,7 @@ public class MainForm extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup buttonGroup1;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -216,10 +261,17 @@ public class MainForm extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JRadioButton jRadioButton1;
     private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JMenu mnuFile;
+    private javax.swing.JCheckBoxMenuItem mnuFileKilep;
+    private javax.swing.JCheckBoxMenuItem mnuFileMent;
+    private javax.swing.JMenu mnuStr;
+    private javax.swing.JRadioButtonMenuItem mnuStrKock;
+    private javax.swing.JRadioButtonMenuItem mnuStrNemKock;
     // End of variables declaration//GEN-END:variables
 }
